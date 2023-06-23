@@ -1,0 +1,31 @@
+RUN THESE SQL CODES !!
+
+1. CREATE TABLE users (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) COLLATE utf8mb4_general_ci NOT NULL,
+  password VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  fname VARCHAR(50) COLLATE utf8mb4_general_ci NOT NULL,
+  lname VARCHAR(50) COLLATE utf8mb4_general_ci NOT NULL,
+  email VARCHAR(50) COLLATE utf8mb4_general_ci NOT NULL
+);
+
+2. CREATE INDEX idx_username ON your_table_name (username);
+
+3. CREATE TABLE songs (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  songName VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  songFile VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  likes INT(255) NOT NULL DEFAULT 0,
+  comms INT(255) NOT NULL DEFAULT 0,
+  created_at DATETIME NOT NULL DEFAULT current_timestamp()
+);
+
+4. CREATE TABLE comments (
+  comm_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  songname VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  uploader VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  songfile VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  commenter VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+  comment VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL
+);
